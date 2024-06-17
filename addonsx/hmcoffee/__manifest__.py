@@ -32,7 +32,8 @@
         'views/bahan_view.xml',
         'views/produk_view.xml',
         'views/supplier_view.xml',
-        'views/pembelian_view.xml'
+        'views/pembelian_view.xml',
+        'views/pesanan_view.xml'
         
     ],
     # only loaded in demonstration mode

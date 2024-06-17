@@ -39,5 +39,12 @@
         name="Pembelian" 
         parent="hmcoffee_menu_root" 
         sequence="10"/>
+
+        <!-- Pesanan Category Menu -->
+        <menuitem 
+        id="pesanan_menu_categ" 
+        name="Pesanan" 
+        parent="hmcoffee_menu_root" 
+        sequence="10"/>
     </data>
 </odoo>

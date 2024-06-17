@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+        <!-- Define the view for the Pesanan model -->
+        <record id="view_pesanan_form" model="ir.ui.view">
+            <field name="name">hmcoffee.pesanan.form</field>
+            <field name="model">hmcoffee.pesanan</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <!-- Add fields to the form view -->
+                        
+                <group name="Pesanan" string="Pesanan">
+                    <field name="pesanan_id"/>
+                    <field name="harga_pesanan"/>
+                    
+                </group>
+                    <group name="Detail Pesanan" string="Detail Pesanan">
+                        <field name="detail_pesanan_ids">
+                            <tree string="Detail Pembelian">
+                                <field name="produk_id"/>
+                                <field name="quantity"/>
+                                <field name="harga"/>
+                            </tree>
+                        </field>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!-- Define the action for the Pesanan model -->
+        <record id="action_pesanan" model="ir.actions.act_window">
+            <field name="name">Pesanan</field>
+            <field name="res_model">hmcoffee.pesanan</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- Define the tree view for the Pesanan model -->
+        <record id="view_pesanan_tree" model="ir.ui.view">
+            <field name="name">hmcoffee.pesanan.tree</field>
+            <field name="model">hmcoffee.pesanan</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="pesanan_id"/>
+                    <field name="harga_pesanan"/>
+                    <field name="detail_pesanan_ids"/>
+                    
+                </tree>
+            </field>
+        </record>
+
+        
+        <!-- Define the menu item for the Pesanan model -->
+        <menuitem id="menu_pesanan_list" name="Pesanan List" parent="pesanan_menu_categ" action="action_pesanan"/>
+    </data>
+</odoo>

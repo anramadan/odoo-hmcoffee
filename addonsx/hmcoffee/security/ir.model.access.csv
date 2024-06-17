@@ -1,9 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_hmcoffee_pegawai,hmcoffee.pegawai,model_hmcoffee_pegawai,,1,1,1,1
-access_hmcoffee_produk,access_hmcoffee_produk,model_hmcoffee_produk,,1,1,1,1
-access_hmcoffee_produk_bahan,hmcoffee.produk.bahan,model_hmcoffee_produk_bahan,,1,1,1,1
-access_hmcoffee_pesanan,hmcoffee.pesanan,model_hmcoffee_pesanan,,1,1,1,1
 access_hmcoffee_supplier,hmcoffee.supplier,model_hmcoffee_supplier,,1,1,1,1
 access_hmcoffee_pembelian,hmcoffee.pembelian,model_hmcoffee_pembelian,,1,1,1,1
 access_hmcoffee_detail_pembelian,hmcoffee.detail.pembelian,model_hmcoffee_detail_pembelian,,1,1,1,1
+access_hmcoffee_produk,hmcoffee.produk,model_hmcoffee_produk,,1,1,1,1
 access_hmcoffee_detail_produk,hmcoffee.detail.produk,model_hmcoffee_detail_produk,,1,1,1,1
+access_hmcoffee_produk_bahan,hmcoffee.produk.bahan,model_hmcoffee_produk_bahan,,1,1,1,1
+access_hmcoffee_pesanan,hmcoffee.pesanan,model_hmcoffee_pesanan,,1,1,1,1
+access_hmcoffee_detail_pesanan,hmcoffee.detail.pesanan,model_hmcoffee_detail_pesanan,,1,1,1,1
