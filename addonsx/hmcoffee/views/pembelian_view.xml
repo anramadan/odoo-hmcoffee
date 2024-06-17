@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Pembelian List View -->
+    <record id="view_pembelian_tree" model="ir.ui.view">
+        <field name="name">pembelian.tree</field>
+        <field name="model">hmcoffee.pembelian</field>
+        <field name="arch" type="xml">
+            <tree string="Pembelian">
+                <field name="supplier_id"/>
+                <field name="tgl_pembelian"/>
+                <field name="detail_pembelian"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Pembelian Form View -->
+    <record id="hmcoffee_pembelian_form" model="ir.ui.view">
+        <field name="name">pembelian.form</field>
+        <field name="model">hmcoffee.pembelian</field>
+        <field name="arch" type="xml">
+            <form string="Pembelian">
+                <sheet>
+                    <group name="pembelian" string="Pembelian">
+                        <field name="supplier_id"/>
+                        <field name="tgl_pembelian"/>
+                    </group>
+                    <group name="Detail Pembelian" string="Detail Pembelian">
+                        <field name="detail_pembelian">
+                            <tree string="Detail Pembelian">
+                                <field name="bahan"/>
+                                <field name="qty"/>
+                                <field name="total_pembelian"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Detail Pembelian Form View -->
+    <record id="view_detail_pembelian_form" model="ir.ui.view">
+        <field name="name">detail.pembelian.form</field>
+        <field name="model">hmcoffee.detail.pembelian</field>
+        <field name="arch" type="xml">
+            <form string="Detail Pembelian">
+                <sheet>
+                    <group>
+                        <field name="bahan"/>
+                        <field name="qty"/>
+                        <field name="total_pembelian"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for Pembelian -->
+    <record id="hmcoffee_pembelian_action" model="ir.actions.act_window">
+        <field name="name">Pembelian</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hmcoffee.pembelian</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menuitem for Pembelian -->
+    <menuitem id="hmcoffee_pembelian_menu" name="Daftar Pembelian" parent="pembelian_menu_categ" action="hmcoffee_pembelian_action" sequence="20"/>
+</odoo>
